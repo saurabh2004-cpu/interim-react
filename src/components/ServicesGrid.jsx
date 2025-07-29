@@ -98,8 +98,8 @@ export default function ServicesGrid() {
     }
 
     return (
-        <section className="bg-yellow-50 py-8 ">
-            <div className="max-w-8xl  mx-auto px-4 sm:px-6 lg:px-8 ">
+        <section className="bg-[#F7F6E9] py-8 ">
+            <div className="max-w-8xl  mx-auto px-4 sm:px-6 lg:px-24 ">
                 {/* Services Grid */}
                 <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 justify-center"
@@ -110,21 +110,21 @@ export default function ServicesGrid() {
                 >
                     {services.map((service) => (
                         <motion.div
+                            className="hover:bg-[#F7F6E9] rounded-2xl p-6 transition-all duration-300 group"
                             key={service.id}
-                            className="bg-[#FFFEF1] hover:bg-yellow-50 rounded-2xl p-6  lg:p-8 shadow-sm  transition-all duration-300 group"
                             variants={cardVariants}
                             whileHover={{
-                                backgroundColor: "yellow-50",
+                                backgroundColor: "#F7F6E9",
                             }}
                         >
-                            <motion.div className="flex justify-strart mb-6 lg:mb-8" variants={iconVariants}>
+                            <motion.div className=" flex justify-strart mb-6 lg:mb-8" variants={iconVariants}>
                                 <motion.div className="py-4 bg-[#fffeeb] rounded-xl transition-colors duration-300">
                                     <img src={service.icon} alt={service.title} className="w-28 h-28" />
                                 </motion.div>
                             </motion.div>
-                            <div className="text-center space-y-4">
+                            <div className="text-center space-y-4 text-[#1D322D]">
                                 <motion.h3
-                                    className="text-xl lg:text-2xl font-bold text-slate-800 leading-tight text-start"
+                                    className="text-xl lg:text-2xl font-bold text-[#1D322D] leading-tight text-start inter-placeholder lg:text-[30px]"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ delay: 0.5, duration: 0.6 }}
@@ -133,7 +133,7 @@ export default function ServicesGrid() {
                                     {service.title}
                                 </motion.h3>
                                 <motion.p
-                                    className="text-gray-600 text-sm lg:text-base leading-relaxed text-start"
+                                    className="text-gray-600 text-sm lg:text-[16px] leading-relaxed text-start inter-placeholder"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ delay: 0.7, duration: 0.6 }}
@@ -152,11 +152,11 @@ export default function ServicesGrid() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
-                    
+
                 >
                     <div className="relative group flex justify-center items-center align-center item-center">
                         <motion.button
-                            className="bg-slate-800 hover:bg-slate-900 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-500 relative z-10 group-hover:rounded-r-none group-hover:pr-4"
+                            className="bg-[#1F3630]  text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-500 relative z-10 group-hover:rounded-r-none group-hover:pr-4"
                             whileHover={{
                                 scale: 1.02,
                             }}
@@ -164,15 +164,15 @@ export default function ServicesGrid() {
                         >
                             <span className="relative z-10">View All Services</span>
                             <motion.div
-                                className="absolute top-0 right-0 h-full w-0 bg-slate-800 group-hover:w-4 transition-all duration-500 ease-out"
+                                className="absolute top-0 right-0 h-full w-0 group-hover:w-4 transition-all duration-500 ease-out"
                             />
                         </motion.button>
 
                         <motion.button
-                            className="bg-orange-300 hover:bg-orange-400 text-slate-800 p-4 rounded-2xl transition-all duration-500 ml-2 group-hover:ml-0 group-hover:rounded-l  hover:text-slate-800 focus:outline-none relative z-10"
+                            className="bg-[#F3AC85]  text-slate-800 p-4 rounded-2xl transition-all duration-500 ml-2 group-hover:ml-0 group-hover:rounded-l  hover:text-slate-800 focus:outline-none relative z-10"
                             whileHover={{
                                 scale: 1.05,
-                                rotate: 5,
+                                
                             }}
                             whileTap={{ scale: 0.95 }}
                         >

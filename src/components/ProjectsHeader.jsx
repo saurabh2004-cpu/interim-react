@@ -25,7 +25,7 @@ export default function ProjectsHeader() {
   }
 
   return (
-    <section className="bg-[#FFFEF1] py-20 lg:py-32 relative">
+    <section className="bg-[#FFFEF2] py-20 lg:py-32 relative">
       <div className="max-w-7xl min-h-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="relative flex justify-center items-center"
@@ -36,17 +36,20 @@ export default function ProjectsHeader() {
         >
           <div className="relative ">
             <motion.div
-              className="flex items-center justify-center   md::justify-center md:relative md:top-10 md:right-38 space-x-3 mb-6 sm:mb-8 sm:ml-4 md:ml-8 lg:ml-16"
+              className="flex items-center justify-center md::justify-center relative top-5 md:top-10 md:right-38 space-x-3 mb-6 sm:mb-8 sm:ml-4 md:ml-8 lg:ml-16"
               variants={fadeInUp}
             >
-              <div className="w-2 h-2 bg-slate-800 rounded-full relative top-3 left-1 md:left-0 md:top-0"></div>
-              <span className="text-xs sm:text-sm font-semibold relative top-3 left-1 md:left-0 md:top-0 text-slate-800 tracking-wider uppercase">
+              <svg className="w-5 h-5 text-[#1D322D] " viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="6" strokeWidth="2" />
+                <circle cx="12" cy="12" r="3.2" fill="currentColor" />
+              </svg>
+              <span className="text-xs font-semibold md:text-[12px] relative  left-1 md:left-0 md:top-0 text-[#1D322D] tracking-wider uppercase inter-placeholder">
                 Our Portfolio
               </span>
             </motion.div>
 
-            <motion.div className="text-center " variants={fadeInUp}>
-              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[12rem] font-black text-slate-800 leading-[0.75] tracking-tighter inter-placeholder">
+            <motion.div className="text-center text-[#1D322D]" variants={fadeInUp}>
+              <h1 className="text-6xl text-[#1D322D] sm:text-7xl md:text-[192px]  lg:text-[192px]   font-black  leading-[0.75] tracking-tighter inter-placeholder">
                 Projects
               </h1>
             </motion.div>
@@ -54,9 +57,9 @@ export default function ProjectsHeader() {
         </motion.div>
       </div>
 
-     
 
-      
+
+
     </section>
   )
 }

@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.11",
     "framer-motion": "^12.23.10",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.527.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "sass": "^1.89.2",
     "shadcn-ui": "^0.9.5"
   },
   "devDependencies": {

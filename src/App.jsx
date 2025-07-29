@@ -15,7 +15,7 @@ function App() {
     <>
     <Navbar />
     <Hero />
-    <VideoSection />
+    {/* <VideoSection /> */}
     <AboutUs />
     <StatsSection  />
     <ServicesHeader />

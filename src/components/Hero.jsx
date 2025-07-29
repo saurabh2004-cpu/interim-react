@@ -22,7 +22,6 @@ export default function Hero() {
     },
   ]
 
-  // Auto-rotate quotes every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentQuote((prev) => (prev + 1) % quotes.length)
@@ -30,7 +29,6 @@ export default function Hero() {
     return () => clearInterval(interval)
   }, [quotes.length])
 
-  // Animation variants
   const slideUpVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -53,24 +51,22 @@ export default function Hero() {
 
   return (
     <section className="bg-[#FFFEF2] h-screen flex flex-col justify-center relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 w-full">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16 lg:py-20 w-full">
         <motion.div className="space-y-16" variants={staggerContainer} initial="hidden" animate="visible">
-          <motion.div className="text-center" variants={slideUpVariants}>
-            <h1 className="text-4xl sm:text-5xl relative  lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-slate-800 leading-[0.9] tracking-tight sm:text-start">
-              <span className="block font-black">Your Ideas,</span>
+          <motion.div className="text-center pt-24 " variants={slideUpVariants}>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-7xl 2xl:text-8xl font-black text-slate-800  tracking-tight text-center sm:text-start inter-placeholder">
+              <span className="block font-black text-md md:text-9xl text-[#1D322D]">Your Ideas,</span>
               <span className="block">
-                <span className="font-black">Our Creative </span>
-                <span className="font-light italic text-slate-700" style={{ fontFamily: "Dancing Script, cursive" }}>
+                <span className="font-black md:text-9xl text-[#1D322D]">Our Creative </span>
+                <span className="font-light italic text-slate-700 text-start md:text-[145px] font-satisfy text-[#1D322D]">
                   Twist
                 </span>
               </span>
             </h1>
           </motion.div>
 
-          
-          <motion.div className="grid lg:grid-cols-2 relative  gap-12 lg:gap-20 items-start" variants={staggerContainer}>
-            <motion.div className="bg-white p-6 rounded-lg shadow-sm max-w-md" variants={slideUpVariants}>
-              {/* Stars */}
+          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start" variants={staggerContainer}>
+            <motion.div className=" w-full p-6 rounded-lg  max-w-md" variants={slideUpVariants}>
               <div className="flex space-x-1 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-orange-400 text-orange-400" />
@@ -96,41 +92,35 @@ export default function Hero() {
                 <div className="w-4 h-0.5 bg-gray-300"></div>
               </div>
 
-              <div className="flex space-x-2 mt-4 justify-center">
+              {/* <div className="flex space-x-2 mt-4 justify-center">
                 {quotes.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentQuote(index)}
                     className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                      index === currentQuote ? "bg-orange-400" : "bg-gray-300"
+                      index === currentQuote ? "bg-orange-400" : ""
                     }`}
                   />
                 ))}
-              </div>
+              </div> */}
             </motion.div>
 
-            {/* Right Column  */}
             <motion.div
-              className="bg-amber-50 p-8 relative sm:left-50  max-w-md rounded-2xl shadow-sm border border-amber-100 space-y-6 relative"
+              className="bg-[#F6F7E9] w-full p-4 relative max-w-md rounded-2xl  space-y-6 md:relative md:bottom-15 md:left-65"
               variants={slideUpVariants}
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-                transition: { duration: 0.3 },
-              }}
+              
             >
               <motion.p
-                className="text-gray-600 text-lg leading-relaxed font-medium pr-20"
+                className="text-gray-600 text-lg leading-relaxed font-medium pr-0  lg:pr-20"
                 whileHover={{ color: "#374151" }}
               >
                 With a commitment to sustainability and innovative solutions where we craft beautiful, functional spaces
                 that stand the test of time.
               </motion.p>
 
-              {/* Buttons */}
-              <motion.div className="flex items-center gap-3">
+              <motion.div className="flex flex-wrap gap-3 items-center">
                 <motion.button
-                  className="bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+                  className="bg-[#1F3630] hover:bg-slate-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
@@ -141,7 +131,7 @@ export default function Hero() {
                 </motion.button>
 
                 <motion.button
-                  className="bg-orange-300 hover:bg-orange-400 text-slate-800 p-3 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  className="bg-[#F3AC85] hover:bg-orange-400 text-slate-800 p-3 rounded-lg transition-colors duration-200 flex items-center justify-center"
                   whileHover={{
                     scale: 1.1,
                     rotate: 5,
@@ -151,14 +141,10 @@ export default function Hero() {
                   <ArrowRight className="h-5 w-5" />
                 </motion.button>
               </motion.div>
-
-             
             </motion.div>
           </motion.div>
         </motion.div>
       </div>
-
-      
     </section>
   )
 }

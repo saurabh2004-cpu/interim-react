@@ -27,3 +27,9 @@ section {
   /* font-size: 200px; */
   color: #000;
 }
+
+.font-satisfy {
+  font-family: 'Satisfy', sans-serif;
+  /* font-size: 145px; */
+  color: #1D322D;
+}
