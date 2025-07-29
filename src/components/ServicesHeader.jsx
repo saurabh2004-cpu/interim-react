@@ -1,3 +1,4 @@
+"use client"
 
 import { motion } from "framer-motion"
 
@@ -23,8 +24,8 @@ export default function ServicesHeader() {
   }
 
   return (
-    <section className="bg-yellow-50 lg:py-32">
-      <div className="  mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+    <section className="bg-yellow-50 py-12 sm:py-16 md:py-20 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="relative"
           variants={staggerContainer}
@@ -32,15 +33,16 @@ export default function ServicesHeader() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* What We Do  */}
-          <motion.div className="flex items-center space-x-3 mb-8 ml-0 lg:ml-16 relative left-25 top-10" variants={fadeInUp}>
-            <div className="w-2 h-2 bg-slate-800 rounded-full"></div>
-            <span className="text-sm font-semibold text-slate-800 tracking-wider uppercase">What We Do</span>
+          <motion.div
+            className="flex items-center justify-center   sm:justify-center md:relative md:top-10 md:right-23 space-x-3 mb-6 sm:mb-8 sm:ml-4 md:ml-8 lg:ml-16"
+            variants={fadeInUp}
+          >
+            <div className="w-2 h-2 bg-slate-800 rounded-full relative top-3 left-1 md:left-0 md:top-0"></div>
+            <span className="text-xs sm:text-sm font-semibold relative top-3 left-1 md:left-0 md:top-0 text-slate-800 tracking-wider uppercase">What We Do</span>
           </motion.div>
 
-          {/* Services Heading */}
           <motion.div className="text-center" variants={fadeInUp}>
-            <h2 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-extrabold text-slate-800 leading-[0.75] tracking-[-0.03em] inter-placeholder">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[12rem] font-black text-slate-800 leading-[0.75] tracking-[-0.03em] inter-placeholder sm:font-sm">
               Services
             </h2>
           </motion.div>

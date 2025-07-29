@@ -36,16 +36,16 @@ export default function ProjectsHeader() {
         >
           <div className="relative ">
             <motion.div
-              className="flex items-center space-x-3 mb-4 sm:mb-6 justify-center sm:justify-start sm:ml-8 lg:ml-12 relative top-10 left-25"
+              className="flex items-center justify-center   md::justify-center md:relative md:top-10 md:right-38 space-x-3 mb-6 sm:mb-8 sm:ml-4 md:ml-8 lg:ml-16"
               variants={fadeInUp}
             >
-              <div className="w-2 h-2 bg-slate-800 rounded-full "></div>
-              <span className="text-xs sm:text-sm font-semibold text-slate-800 tracking-wider uppercase">
+              <div className="w-2 h-2 bg-slate-800 rounded-full relative top-3 left-1 md:left-0 md:top-0"></div>
+              <span className="text-xs sm:text-sm font-semibold relative top-3 left-1 md:left-0 md:top-0 text-slate-800 tracking-wider uppercase">
                 Our Portfolio
               </span>
             </motion.div>
 
-            <motion.div className="text-center" variants={fadeInUp}>
+            <motion.div className="text-center " variants={fadeInUp}>
               <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[12rem] font-black text-slate-800 leading-[0.75] tracking-tighter inter-placeholder">
                 Projects
               </h1>

@@ -24,6 +24,6 @@ section {
 
 .inter-placeholder {
   font-family: 'Inter', sans-serif;
-  font-size: 200px;
+  /* font-size: 200px; */
   color: #000;
 }
