@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #FFFEF2 !important;
+}
+
+[data-scroll-container] {
+  will-change: transform;
+}
+
+section {
+  scroll-behavior: auto !important;
+}
+
+.inter-placeholder {
+  font-family: 'Inter', sans-serif;
+  font-size: 200px;
+  color: #000;
+}
