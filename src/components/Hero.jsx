@@ -65,8 +65,8 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start" variants={staggerContainer}>
-            <motion.div className=" w-full p-6 rounded-lg  max-w-md" variants={slideUpVariants}>
+          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start " variants={staggerContainer}>
+            <motion.div className=" w-full p-6 rounded-lg max-w-sm relative md:bottom-12 " variants={slideUpVariants}>
               <div className="flex space-x-1 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-orange-400 text-orange-400" />

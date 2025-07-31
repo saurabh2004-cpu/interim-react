@@ -88,11 +88,11 @@ export default function StatsSection() {
           <motion.div className="grid grid-cols-1 lg:grid-cols-3 md:gap-8 lg:gap-4 " variants={staggerContainer}>
             {stats.map((stat, index) => (
               <motion.div key={index} className="md:space-y-6 text-left bg-[#F7F6E9] rounded-lg px-4 " variants={fadeInUp}>
-                <div className="flex items-center gap-2 md:items-baseline">
+                <div className="flex items-center gap-2 ">
                   <div className="  text-[134px] xl:text-[134px] font-semibold text-[#1F3630] leading-none tracking-tight">
                     <AnimatedCounter value={stat.number} duration={2.5} />
                   </div>
-                  <span className="text-[#F3AC85] text-7xl xl:text-8xl font-bold  ml-1 inter-placeholder">+</span>
+                  <span className=" text-[#F3AC85]   inter-placeholder   text-7xl xl:text-8xl   ml-1 " style={{color: "#F3AC85"}}>+</span>
                 </div>
 
                 <div className="p-4">

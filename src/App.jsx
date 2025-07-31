@@ -8,6 +8,15 @@ import ServicesHeader from './components/ServicesHeader'
 import ServicesGrid from './components/ServicesGrid'
 import ProjectsHeader from './components/ProjectsHeader'
 import ProjectShowcase from './components/ProjectsShowcase'
+import ReviewsHeader from './components/ReviewsHeader'
+import ReviewsCarousel from './components/ReviewsCarousel'
+import AwardsSection from './components/AwardsSection'
+import ClientsSection from './components/ClientsSection'
+import SpecialitiesSection from './components/SpecialitiesSection'
+import PackagesHeader from './components/PackagesHeader'
+import PackagesCards from './components/PackagesCards'
+import BlogsHeader from './components/BlogsHeader'
+import BlogsCards from './components/BlogsCards'
 
 function App() {
 
@@ -15,13 +24,22 @@ function App() {
     <>
     <Navbar />
     <Hero />
-    {/* <VideoSection /> */}
+    {/* <VideoSection /> */}   
     <AboutUs />
     <StatsSection  />
     <ServicesHeader />
     <ServicesGrid />
     <ProjectsHeader />
-    <ProjectShowcase />
+    <ProjectShowcase />  
+    <ReviewsHeader />
+    <ReviewsCarousel />
+    <AwardsSection />
+    <ClientsSection />
+    <SpecialitiesSection />
+    <PackagesHeader />
+    <PackagesCards />
+    <BlogsHeader />
+    <BlogsCards />
     </>
   )
 }
