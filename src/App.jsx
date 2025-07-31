@@ -17,6 +17,8 @@ import PackagesHeader from './components/PackagesHeader'
 import PackagesCards from './components/PackagesCards'
 import BlogsHeader from './components/BlogsHeader'
 import BlogsCards from './components/BlogsCards'
+import FAQSection from './components/FAQSection'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -40,6 +42,8 @@ function App() {
     <PackagesCards />
     <BlogsHeader />
     <BlogsCards />
+    <FAQSection />
+    <Footer />
     </>
   )
 }

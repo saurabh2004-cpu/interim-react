@@ -35,7 +35,7 @@ section {
 .inter-placeholder {
   font-family: 'Inter', sans-serif;
   /* font-size: 200px; */
-  color: #000;
+  /* color: #000; */
 }
 
 .font-satisfy {
@@ -43,3 +43,6 @@ section {
   /* font-size: 145px; */
   color: #1D322D;
 }
+
+
+
