@@ -200,18 +200,7 @@ export default function ReviewsCarousel() {
       
 
       {/* Side UI Elements */}
-      <div className="fixed top-4 right-4 z-50 flex flex-col gap-3">
-        <motion.button
-          className="bg-[#F3AC85] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-lg"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1 }}
-        >
-          Free Quote
-        </motion.button>
-      </div>
+     
 
      
     </motion.section>

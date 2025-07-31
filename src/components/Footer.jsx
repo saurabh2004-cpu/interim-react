@@ -1,14 +1,16 @@
 import styled from 'styled-components';
+import { Instagram, Facebook, Twitter, Youtube, Linkedin, X, } from 'lucide-react';
+
 
 const Footer = () => {
     return (
         <div>
             <div className="bg-[#1f3630] py-16 mx-2 md:mx-10 sm:px-6 lg:px-8 rounded-lg">
-                <div className="max-w-7xl mx-auto">
+                <div className=" mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-4" >
                         {/* Left Side - Contact Info */}
-                        <div className="  px-8 text-[#fdfcee]" >
-                            <div className="space-y-6">
+                        <div className=" px-4 md:px-8 text-[#fdfcee]" >
+                            <div className="space-y-6 ">
                                 {/* Email */}
                                 <div className="bg-white/5 rounded-xl p-4">
                                     <div className="flex justify-between items-center">
@@ -216,89 +218,172 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-                <footer className="bg-[#1d322d] text-white px-6 mx-10 my-10 rounded-lg py-10 font-inter">
-                    <div className="flex flex-col md:flex-row justify-space-between gap-12 mb-8">
-                        {/* Left Column */}
-                        <div className="flex flex-col gap-8 flex-1">
-                            {/* Social Section */}
-                            <div>
-                                <div className="flex flex-col gap-4">
-                                    <div className="flex flex-wrap gap-4">
-                                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="uppercase text-sm hover:opacity-80">FACEBOOK</a>
-                                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="uppercase text-sm hover:opacity-80">TWITTER</a>
-                                    </div>
-                                    <div className="flex flex-wrap gap-4">
-                                        <a href="https://behance.com" target="_blank" rel="noopener noreferrer" className="uppercase text-sm hover:opacity-80">BEHANCE</a>
-                                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="uppercase text-sm hover:opacity-80">YOUTUBE</a>
-                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="uppercase text-sm hover:opacity-80">LINKEDIN</a>
-                                    </div>
-                                </div>
+
+            <footer className="bg-[#1f3630] py-16 mx-2 mt-10 md:mx-10 sm:px-6 lg:px-8 rounded-lg ">
+                <div className="flex flex-col lg:flex-row gap-12 mb-8">
+                    <div className="w-full lg:w-1/2">
+
+                        {/* Social Cards Section */}
+                        <div className="mb-10 ">
+                            <div className="grid grid-cols-3 md:grid-cols-3 gap-3 mb-6 px-4 md:px-20 py-16">
+                                <SocialCard
+                                    icon={<Instagram className="w-8 h-8" />}
+                                    name="INSTAGRAM"
+                                    href="https://facebook.com"
+                                />
+                                <SocialCard
+                                    icon={<Facebook className="w-8 h-8" />}
+                                    name="FACEBOOK"
+                                    href="https://twitter.com"
+                                />
+                                <SocialCard
+                                    icon={<X className="w-8 h-8" />}
+                                    name="TWITTER"
+                                    href="https://youtube.com"
+                                />
+                                <SocialCard
+                                    icon={<Linkedin className="w-8 h-8" />}
+                                    name="BEHANCE"
+                                    href="https://linkedin.com"
+                                />
+                                <SocialCard
+                                    icon={<Youtube className="w-8 h-8" />}
+                                    name="YOUTUBE"
+                                    href="https://youtube.com"
+                                />
+                                <SocialCard
+                                    icon={<Linkedin className="w-8 h-8" />}
+                                    name="LINKEDIN"
+                                    href="https://linkedin.com"
+                                />
                             </div>
 
-                            {/* Newsletter Section */}
-                            <div>
-                                <h3 className="text-base font-medium uppercase mb-4">Subscribe to the newsletter</h3>
-                                <form className="flex gap-2 max-w-md">
-                                    <input
-                                        type="email"
-                                        placeholder="jane@farmer.com"
-                                        className="flex-1 px-4 py-3 rounded-md border border-white/10 bg-white/5 text-white placeholder-white/50"
-                                    />
-                                    <button
-                                        type="submit"
-                                        className="px-5 py-3 rounded-md bg-white text-black font-medium hover:bg-gray-200"
-                                    >
-                                        Submit
-                                    </button>
-                                </form>
-                            </div>
+
                         </div>
 
-                        {/* Right Column */}
-                        <div className="flex-2">
-                            <div className="flex flex-col md:flex-row gap-12">
-                                {/* Menu */}
-                                <div>
-                                    <h3 className="text-base font-semibold uppercase mb-4">Menu</h3>
-                                    <div className="flex flex-col gap-2 text-sm">
-                                        {['Home', 'About', 'Projects', 'Gallery', 'Videos', 'Blog', 'Review', 'Contact'].map((item) => (
-                                            <a key={item} href={`/${item.toLowerCase()}`} className="hover:opacity-80">{item}</a>
-                                        ))}
-                                    </div>
-                                </div>
+                        {/* Newsletter Section */}
+                        <div className='px-4 md:px-20'>
+                            <h3 className="text-sm font-semibold uppercase mb-4 tracking-wider inter-placeholder text-[#fdfcee] ">Subscribe to the newsletter</h3>
+                            <form className="flex flex-col sm:flex-row gap-3 max-w-md">
+                                <input
+                                    type="email"
+                                    placeholder="jane@framer.com"
+                                    className="flex-1 px-4 py-3 rounded-md border border-white/10 bg-white/5 text-white placeholder-white/50 text-sm text-[#fdfcee]"
+                                />
+                                <button
+                                    type="submit"
+                                    className="px-6 py-3 rounded-md bg-white text-[#1d322d] font-medium hover:bg-gray-200 text-sm uppercase whitespace-nowrap"
+                                >
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
 
-                                {/* Services */}
-                                <div>
-                                    <h3 className="text-base font-semibold uppercase mb-4">Services</h3>
-                                    <div className="flex flex-col gap-2 text-sm">
-                                        {[
-                                            'Residential Interior Design',
-                                            'Commercial Interior Design',
-                                            'Space Planning',
-                                            'Design Consultation',
-                                            'Lighting Design',
-                                            'Custom Furniture Design',
-                                            'Art and Accessory Procurement',
-                                            'Color Consultation',
-                                            'Outdoor and Landscape Design',
-                                            'Renovation and Remodeling',
-                                            'Project Management',
-                                            'Styling and Staging'
-                                        ].map((service) => (
-                                            <a key={service} href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, '')}`} className="hover:opacity-80">
-                                                {service}
-                                            </a>
-                                        ))}
-                                    </div>
+                    {/* Right Column (50% width) */}
+                    <div className="w-full lg:w-1/2">
+                        <div className="flex flex-col md:flex-row  items-center ">
+                            {/* Menu Column */}
+                            <div className="w-full md:w-1/2 relative bottom-12">
+                                <h3 className="text-lg font-medium uppercase px-4 mb-4 py-8 md:text-center pb-2 text-[#f3ac85] inter-placeholder ">Menu</h3>
+                                <div className="flex flex-col gap-3 text-sm px-4 md:items-center ">
+                                    {['Home', 'About', 'Projects', 'Gallery', 'Videos', 'Blog', 'Review', 'Contact'].map((item) => (
+                                        <a
+                                            key={item}
+                                            href={`/${item.toLowerCase()}`}
+                                            className={`flex w-1/8 text-start hover:opacity-80 transition-opacity text-[16px] font-medium inter-placeholder hover:text-[#f3ac85] hover:underline animate-underline duration-900 ease-in-out text-[#fdfcee] text-start ${item === 'Home' ? 'text-[#f3ac85]' : ''}`}
+                                        >
+                                            {item}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Services Column */}
+                            <div className="w-full md:w-1/2">
+                                <h3 className="text-lg font-medium uppercase mb-4 tracking-wider border-b px-4 border-white/20 pb-2 text-[#f3ac85]">Services</h3>
+                                <div className="flex flex-col gap-3 text-sm">
+                                    {[
+                                        'Residential Interior Design',
+                                        'Commercial Interior Design',
+                                        'Space Planning',
+                                        'Design Consultation',
+                                        'Lighting Design',
+                                        'Custom Furniture Design',
+                                        'Art and Accessory Procurement',
+                                        'Color Consultation',
+                                        'Outdoor and Landscape Design',
+                                        'Renovation and Remodeling',
+                                        'Project Management',
+                                        'Styling and Staging'
+                                    ].map((service) => (
+                                        <a
+                                            key={service}
+                                            href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                            className="hover:opacity-80 text-[#fdfcee] transition-opacity text-[16px] px-4 font-medium inter hover:text-[#f3ac85] hover:underline animate-underline duration-900 ease-in-out"
+                                        >
+                                            {service}
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                </footer>
+                {/* Company Name */}
+                <div className="w-full flex justify-center items-center text-center font-inter px-4">
+                    <div className="text-[clamp(80px,27vw,300px)]  md:text-[clamp(160px,28vw,500px)] lg:text-[clamp(200px,28vw,600px)] font-black text-[#f3ac85] leading-[0.85] tracking-[-0.04em] mb-10">
+                        interim
+                    </div>
+                </div>
+
+
+                <div className="text-white px-6 font-sans">
+                    {/* Top Border Line */}
+                    <div className="h-[1px] bg-white/10 w-full" />
+
+                    {/* Footer Content */}
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 py-6 px-4 sm:px-6 md:px-8">
+
+                        {/* Links Section */}
+                        <div className="w-full md:w-auto flex justify-center md:justify-start">
+                            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-center md:text-left">
+                                <a href="/privacy" className="text-sm sm:text-md hover:underline inter-placeholder">Privacy Policy</a>
+                                <a href="/terms" className="text-sm sm:text-md hover:underline inter-placeholder">Terms</a>
+                            </div>
+                        </div>
+
+                        {/* Copyright Section */}
+                        <div className="w-full md:w-auto flex flex-col sm:flex-row justify-center md:justify-end items-center gap-2 sm:gap-6 text-sm sm:text-md inter-placeholder text-center md:text-right">
+                            <span>© Template by RealMehedi</span>
+                            <span>Built in Framer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
         </div>
     )
 }
+
+// Social Card Component
+const SocialCard = ({ icon, name, href }) => {
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center bg-white/5 rounded-lg md:p-4 hover:bg-white/10 py-4 md:py-10 hover:ring-1 ring-white/10 transition-colors hover:scale-105"
+        >
+            <div className="mb-2 text-white">
+                {icon}
+            </div>
+            <span className="text-sm uppercase tracking-wider inter-placeholder my-2 text-white">{name}</span>
+        </a>
+    );
+};
+
 
 
 export default Footer

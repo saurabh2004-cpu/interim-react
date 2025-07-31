@@ -55,7 +55,7 @@ const Card = ({ title, description, src, color, categories, i }) => {
       style={{
         top: `calc(5vh + ${i * 25}px)`,
         height: "100vh",
-        
+
       }}
 
     >
@@ -122,7 +122,7 @@ const Card = ({ title, description, src, color, categories, i }) => {
 }
 
 export default function ProjectShowcase() {
-  const containerRef = useRef(null)
+  // const containerRef = useRef(null)
 
   return (
     <div className="relative">
@@ -169,3 +169,5 @@ export default function ProjectShowcase() {
     </div>
   )
 }
+
+
