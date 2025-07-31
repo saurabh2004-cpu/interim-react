@@ -87,7 +87,7 @@ export default function StatsSection() {
           {/* Stats Grid */}
           <motion.div className="grid grid-cols-1 lg:grid-cols-3 md:gap-8 lg:gap-4 " variants={staggerContainer}>
             {stats.map((stat, index) => (
-              <motion.div key={index} className="md:space-y-6 text-left bg-[#F7F6E9] rounded-lg px-4 " variants={fadeInUp}>
+              <motion.div key={index} className="md:space-y-6 text-left bg-[#F7F6E9] rounded-lg px-4 my-2 md:my-0 " variants={fadeInUp}>
                 <div className="flex items-center gap-2 ">
                   <div className="  text-[134px] xl:text-[134px] font-semibold text-[#1F3630] leading-none tracking-tight">
                     <AnimatedCounter value={stat.number} duration={2.5} />
@@ -95,14 +95,14 @@ export default function StatsSection() {
                   <span className=" text-[#F3AC85]   inter-placeholder   text-7xl xl:text-8xl   ml-1 " style={{color: "#F3AC85"}}>+</span>
                 </div>
 
-                <div className="p-4">
+                <div className="md:py-4 ">
                   {/* Title */}
                   <h3 className="text-2xl pt-22 sm:text-3xl lg:text-4xl font-bold text-[#1F3630] leading-tight inter-placeholder">
                     {stat.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[#1D322D] md:text-[16px] text-base sm:text-lg leading-relaxed max-w-sm inter-placeholder">{stat.description}</p>
+                  <p className="text-[#1D322D] md:text-[16px] min-w-full text-base sm:text-lg leading-relaxed max-w-sm inter-placeholder">{stat.description}</p>
                 </div>
               </motion.div>
             ))}

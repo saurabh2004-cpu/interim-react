@@ -1,5 +1,3 @@
-"use client"
-
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { useRef } from "react"
@@ -54,14 +52,14 @@ const Card = ({ title, description, src, color, categories, i }) => {
       className="sticky flex items-center justify-center"
       style={{
         top: `calc(5vh + ${i * 25}px)`,
-        height: "100vh",
+        // height: "100vh",
 
       }}
 
     >
       <motion.div className="w-full max-w-[1400px] mx-auto px-2 lg:px-20" style={{ y }}>
         <div
-          className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16 rounded-3xl p-4 lg:px-4 min-h-[80vh] lg:min-h-[70vh]"
+          className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16 rounded-3xl p-4 my-4 lg:px-4 min-h-[80vh] lg:min-h-[70vh]"
           style={{ backgroundColor: color }}
         >
           {/* Left - Categories */}
@@ -70,7 +68,7 @@ const Card = ({ title, description, src, color, categories, i }) => {
               {categories.map((category, idx) => (
                 <motion.button
                   key={idx}
-                  className="px-2 py-2 border border-gray-400 rounded-lg font-medium text-black hover:border-gray-600 transition-colors duration-200 inter-placeholder"
+                  className="px-2 py-2 border border-gray-400 rounded-lg font-medium text-[#1D322D] hover:border-gray-600 transition-colors duration-200 inter-placeholder"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -106,7 +104,7 @@ const Card = ({ title, description, src, color, categories, i }) => {
           <div className="flex-1 max-w-lg h-[400px] sm:h-[460px] lg:h-[500px]">
             <div className="h-full flex flex-col justify-between">
               {/* Project Title - Top */}
-              <h2 className="text-[24px] lg:text-[30px] md:max-w-[300px] text-black font-black leading-[0.9] inter-placeholder">
+              <h2 className="text-[24px] lg:text-[32px] md:max-w-[300px] text-black font-black leading-[0.9] inter-placeholder">
                 {title}
               </h2>
               {/* Project Description - Bottom */}
@@ -122,12 +120,10 @@ const Card = ({ title, description, src, color, categories, i }) => {
 }
 
 export default function ProjectShowcase() {
-  // const containerRef = useRef(null)
 
   return (
     <div className="relative">
-      {/* Container with sufficient height for stacking animation */}
-      <div style={{ height: `${projects.length * 100}vh` }}>
+      <div className="h-[100%]">
         {projects.map((project, i) => (
           <Card key={i} {...project} i={i} />
         ))}

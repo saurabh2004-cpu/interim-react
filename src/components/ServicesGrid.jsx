@@ -110,15 +110,16 @@ export default function ServicesGrid() {
                 >
                     {services.map((service) => (
                         <motion.div
-                            className="hover:bg-[#F7F6E9] rounded-2xl p-6 transition-all duration-300 group"
+                            className="bg-[#F7F6E9] rounded-2xl p-6 transition-all duration-300 group"
                             key={service.id}
+                            style={{ backgroundColor: "#fffef2" }}
                             variants={cardVariants}
                             whileHover={{
                                 backgroundColor: "#F7F6E9",
                             }}
                         >
                             <motion.div className=" flex justify-strart mb-6 lg:mb-8" variants={iconVariants}>
-                                <motion.div className="py-4 bg-[#fffeeb] rounded-xl transition-colors duration-300">
+                                <motion.div className="py-4  rounded-xl transition-colors duration-300">
                                     <img src={service.icon} alt={service.title} className="w-28 h-28" />
                                 </motion.div>
                             </motion.div>

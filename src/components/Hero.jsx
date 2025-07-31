@@ -55,10 +55,10 @@ export default function Hero() {
         <motion.div className="space-y-16" variants={staggerContainer} initial="hidden" animate="visible">
           <motion.div className="text-center pt-24 " variants={slideUpVariants}>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-7xl 2xl:text-8xl font-black text-slate-800  tracking-tight text-center sm:text-start inter-placeholder">
-              <span className="block font-black text-md md:text-9xl text-[#1D322D]">Your Ideas,</span>
-              <span className="block">
-                <span className="font-black md:text-9xl text-[#1D322D]">Our Creative </span>
-                <span className="font-light italic text-slate-700 text-start md:text-[145px] font-satisfy text-[#1D322D]">
+              <span className="block font-black text-6xl text-start mt-16 mb-2 md:mb-0 md:mt-0 md:text-9xl text-[#1D322D]">Your Ideas,</span>
+              <span className="w-full md:block ">
+                <span className="font-black flex md:inline text-5xl text-start md:text-9xl text-[#1D322D]">Our Creative </span>
+                <span className="font-light italic flex text-6xl text-[#1D322D] text-start md:text-[145px] font-satisfy text-[#1D322D]">
                   Twist
                 </span>
               </span>
@@ -92,23 +92,13 @@ export default function Hero() {
                 <div className="w-4 h-0.5 bg-gray-300"></div>
               </div>
 
-              {/* <div className="flex space-x-2 mt-4 justify-center">
-                {quotes.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentQuote(index)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                      index === currentQuote ? "bg-orange-400" : ""
-                    }`}
-                  />
-                ))}
-              </div> */}
+
             </motion.div>
 
             <motion.div
               className="bg-[#F6F7E9] w-full p-4 relative max-w-md rounded-2xl  space-y-6 md:relative md:bottom-15 md:left-65"
               variants={slideUpVariants}
-              
+
             >
               <motion.p
                 className="text-gray-600 text-lg leading-relaxed font-medium pr-0  lg:pr-20"
@@ -118,29 +108,41 @@ export default function Hero() {
                 that stand the test of time.
               </motion.p>
 
-              <motion.div className="flex flex-wrap gap-3 items-center">
+              <div className="relative group flex justify-start items-center align-center item-center mb-32">
                 <motion.button
-                  className="bg-[#1F3630] hover:bg-slate-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+                  className="bg-[#1F3630]  text-white px-8 py-3 rounded-2xl font-semibold text-lg transition-all duration-500 relative z-10 group-hover:rounded-r-none group-hover:pr-4"
                   whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+                    scale: 1.02,
                   }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  Buy Template
+                  <span className="relative z-10">But Template</span>
+                  <motion.div
+                    className="absolute top-0 right-0 h-full w-0 group-hover:w-4 transition-all duration-500 ease-out"
+                  />
                 </motion.button>
 
                 <motion.button
-                  className="bg-[#F3AC85] hover:bg-orange-400 text-slate-800 p-3 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  className="bg-[#F3AC85]  text-slate-800 p-3 rounded-2xl transition-all duration-500 ml-2 group-hover:ml-0 group-hover:rounded-l  hover:text-slate-800 focus:outline-none relative z-10"
                   whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
+                    scale: 1.05,
+
                   }}
-                  whileTap={{ scale: 0.9 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <ArrowRight className="h-5 w-5" />
+                  <motion.div whileHover={{ y: 2 }} transition={{ duration: 0.2 }}>
+                    <ArrowRight className="w-6 h-6" />
+                  </motion.div>
                 </motion.button>
-              </motion.div>
+
+                <motion.div
+                  className="absolute top-0 left-0 h-full  rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out"
+                  style={{
+                    width: "calc(100% - 8px)",
+                    zIndex: 5,
+                  }}
+                />
+              </div>
             </motion.div>
           </motion.div>
         </motion.div>

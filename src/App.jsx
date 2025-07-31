@@ -19,7 +19,6 @@ import BlogsHeader from './components/BlogsHeader'
 import BlogsCards from './components/BlogsCards'
 import FAQSection from './components/FAQSection'
 import Footer from './components/Footer'
-import Home from './components/Test'
 
 function App() {
 

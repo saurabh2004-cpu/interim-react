@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function AboutUs() {
   return (
-    <section className="bg-[#FAFAED] text-[#1D2B29]  px-6 p-12 m-x-12 sm:px-10 lg:px-20">
+    <section className="bg-[#Fffef2] text-[#1D2B29]  px-6 p-12 m-x-12 sm:px-10 lg:px-20">
       <div className=" mx-auto flex flex-col lg:flex-row items-start gap-12">
 
         <div className="flex items-start gap-2 min-w-[100px] relative top-10 md:top-0">
@@ -22,7 +22,7 @@ export default function AboutUs() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 max-w-5xl relative z-10 sm:left-50"
         >
-          <p className="indent-8 md:indent-16 text-[28px] px-2  text-[#1D322D] text-start  lg:text-4xl leading-tight font-medium">
+          <p className="indent-8 md:indent-16 text-[26px] font-medium md:px-2  text-[#1D322D] text-start  lg:text-4xl leading-tight font-medium">
             Founded in 2010, our studio started as a small team of design
             enthusiasts with big dreams. At Interim, we're not just about
             creating beautiful spaces – we're about crafting stories and
@@ -33,12 +33,12 @@ export default function AboutUs() {
 
           <div className="group w-fit cursor-pointer pt-8">
             <div className="flex items-center gap-2 pb-1 relative">
-              <span className="text-sm sm:text-base font-bold uppercase text-[#1D2B29]">
+              <span className="text-md sm:text-base font-bold uppercase text-[#1D2B29]">
                 Know More
               </span>
 
               <div className="hover:bg-[#F4B183] rounded-full p-1 transition-transform duration-300 group-hover:translate-x-1">
-                <ArrowRight className="h-4 w-4 text-black" />
+                <ArrowRight className="h-4 w-4 text-black rounded-full border" />
               </div>
 
               {/* Animated underline */}

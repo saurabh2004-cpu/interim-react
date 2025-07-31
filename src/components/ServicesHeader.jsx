@@ -24,7 +24,7 @@ export default function ServicesHeader() {
   }
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-32">
+    <section className="py-12 bg-[#F7F6E9] sm:py-16 md:py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="relative"
@@ -34,18 +34,18 @@ export default function ServicesHeader() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.div
-            className="flex items-center justify-center md:text-[12px] sm:justify-center relative  top-5 md:top-10 md:right-45 space-x-3 mb-6 sm:mb-8 sm:ml-4 md:ml-8 lg:ml-16"
+            className="flex items-center justify-center md:text-[12px] sm:justify-center relative  top-5 md:top-15 tracking-tighter md:right-49  mb-6 sm:mb-8 sm:ml-4 md:ml-8 lg:ml-16"
             variants={fadeInUp}
           >
             <svg className="w-5 h-5 text-slate-800" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <circle cx="12" cy="12" r="6" strokeWidth="2" />
             <circle cx="12" cy="12" r="3.2" fill="currentColor" />
           </svg>
-            <span className="text-xs sm:text-sm font-semibold relative  left-1 md:left-0 md:top-0 text-[#1D322D] tracking-wider uppercase">What We Do</span>
+            <span className="text-xs sm:text-sm font-semibold relative  left-1 md:0 md:top-0 text-[#1D322D] tracking-tight word-spacing-tight uppercase">What We Do</span>
           </motion.div>
 
           <motion.div className="text-center" variants={fadeInUp}>
-            <h2 className="text-[66px] font-semibold md:text-[220px] text-[#1D322D] font-black leading-[0.75] tracking-[-0.03em] inter-placeholder sm:font-sm">
+            <h2 className="text-[66px] tracking-tighter font-semibold md:text-[220px] text-[#1D322D] font-black leading-[0.75] tracking-[-0.03em] inter-placeholder sm:font-sm">
               Services
             </h2>
           </motion.div>
