@@ -23,11 +23,13 @@ const PackagesCards = () => {
                 "Project timeline and budget overview"
             ],
             buttonText: "Book a Call",
-            textColor: "#FDFCEE",
+            textColor: "#1D322D",
             featureTextColor: "#1D322D",
             checkmarkColor: "#1F3630",
             buttonColor: "#1F3630",
-            arrowColor: "#1F3630"
+            buttonTextColor: "#FDFCEE",
+            arrowColor: "#1F3630",
+            headingBackground: "#0000000D",
         },
         {
             title: "Premium",
@@ -49,11 +51,13 @@ const PackagesCards = () => {
                 "Bi-weekly progress updates"
             ],
             buttonText: "Free Quote",
-            textColor: "#1D322D",
+            textColor: "#FDFCEE",
             featureTextColor: "#FDFCEE",
             checkmarkColor: "#F3AC85",
             buttonColor: "#FFFEF2",
-            arrowColor: "#1F3630"
+            buttonTextColor: "#1D322D",
+            arrowColor: "#1F3630",
+            headingBackground: "#FFFFFF0D"
         },
         {
             title: "Luxury",
@@ -75,31 +79,33 @@ const PackagesCards = () => {
                 "Client access to exclusive design resources and events"
             ],
             buttonText: "Book a Call",
-            textColor: "#FDFCEE",
+            textColor: "#1D322D",
             featureTextColor: "#1D322D",
             checkmarkColor: "#1F3630",
             buttonColor: "#1F3630",
-            arrowColor: "#1F3630"
+            buttonTextColor: "#FDFCEE",
+            arrowColor: "#1F3630",
+            headingBackground: "#0000000D"
         }
     ];
 
     return (
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#FDFEF2] min-h-[38.25em]">
             <div className="mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                     {plans.map((plan, index) => (
                         <div
                             key={index}
-                            className="rounded-xl p-6"
+                            className="rounded-xl p-6 "
                             style={{ backgroundColor: plan.background }}
                         >
-                            <div className="flex items-start mb-4">
-                                <div className="p-2 rounded-md bg-[#F3AC85] mr-4">
+                            <div className="flex items-start mb-4 p-4 rounded-xl flex-row align-center  w-full align-center " style={{ backgroundColor: plan.headingBackground }}>
+                                <div className=" rounded-md p-3  mr-4 bg-[#F3AC85]" style={{ backgroundColor: plan.iconColor }}>
                                     {plan.icon}
                                 </div>
-                                <div>
-                                    <h3 className="text-xl font-bold" style={{ color: plan.textColor }}>{plan.title}</h3>
-                                    <p className="text-lg text-[#F3AC85]">{plan.price}</p>
+                                <h3 className="text-xl font-bold relative md:top-2" style={{ color: plan.textColor }}>{plan.title}</h3>
+                                <div className="flex w-full align-end justify-end align-center relative md:top-2">
+                                    <p className={`  text-lg ${plan.title == 'Premium' ? 'text-[#F3AC85]' : 'text-[#1F3630]'}  text-right `}>{plan.price}</p>
                                 </div>
                             </div>
 
@@ -121,48 +127,34 @@ const PackagesCards = () => {
                             </ul>
 
 
-                                {/* //button */}
-                            <motion.div
-                                className="flex justify-center items-center mt-[-20px]"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.4 }}
-                                viewport={{ once: true }}
-                            >
-                                <a
-                                    href="./"
-                                    className="inline-flex items-center group rounded-[10px] overflow-hidden"
+                            {/* //button */}
+                            <div className='flex align-center mt-6'>
+                                <motion.button
+                                    className=" text-white px-8 py-2 rounded-xl font-semibold text-lg transition-all duration-500 relative z-10 group-hover:rounded-r-none group-hover:pr-4"
+                                    whileHover={{
+                                        scale: 1.02,
+                                    }}
+                                    style={{ backgroundColor: plan.buttonColor }}
+                                    whileTap={{ scale: 0.98 }}
                                 >
-                                    <motion.button
-                                        className="px-8 py-4 font-semibold text-lg transition-all duration-300 relative z-10 group-hover:pr-4"
-                                        style={{
-                                            backgroundColor: plan.buttonColor,
-                                            color: plan.textColor
-                                        }}
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                    >
-                                        {plan.buttonText}
-                                    </motion.button>
+                                    <span className="relative z-10 inter-placeholder" style={{ color: plan.buttonTextColor }}>{plan.buttonText} </span>
+                                    <motion.div
+                                        className="absolute top-0 right-0 h-full w-0 group-hover:w-4 transition-all duration-500 ease-out"
+                                    />
+                                </motion.button>
+                                <motion.button
+                                    className="bg-[#F3AC85]  text-[#1F3630] p-3  rounded-xl transition-all duration-500 ml-2 group-hover:ml-0 group-hover:rounded-l focus:outline-none relative z-10"
+                                    whileHover={{
+                                        scale: 1.05,
 
-                                    <motion.button
-                                        className="bg-[#F3AC85]   text-slate-800 p-4 rounded-2xl transition-all duration-500 ml-2 group-hover:ml-0 group-hover:rounded-l  hover:text-slate-800 focus:outline-none relative z-10"
-                                        whileHover={{
-                                            scale: 1.05,
-
-                                        }}
-                                        whileTap={{ scale: 0.95 }}
-                                    >
-                                        <motion.div whileHover={{ y: 2 }} transition={{ duration: 0.2 }}>
-                                            {/* <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                                            </svg> */}
-                                            <ArrowRight color={plan.arrowColor} className="hover:rotate-[-45deg]" />
-                                        </motion.div>
-                                    </motion.button>
-
-                                </a>
-                            </motion.div>
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <motion.div whileHover={{ y: 2 }} transition={{ duration: 0.2 }}>
+                                        <ArrowRight size={20} strokeWidth={2} />
+                                    </motion.div>
+                                </motion.button>
+                            </div>
                         </div>
                     ))}
                 </div>

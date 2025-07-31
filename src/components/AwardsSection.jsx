@@ -42,7 +42,7 @@ const AwardsSection = () => {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     <motion.div
-                        className="flex items-center space-x-3 mb-4 relative top-5  md:top-15 md:right-19"
+                        className="flex items-center space-x-3 mb-4 relative top-5   md:top-15 md:right-19"
                         variants={fadeInUp}
                     >
                         <svg className="w-5 h-5 text-[#f3ac85]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -71,9 +71,9 @@ const AwardsSection = () => {
                             {awards.slice(0, 3).map((award, index) => (
                                 <div
                                     key={index}
-                                    className="bg-[#FFFFFF0D] rounded-lg p-4 sm:p-5 md:p-6 flex items-center space-x-3 sm:space-x-4 transition-colors duration-200 "
+                                    className="bg-[#FFFFFF0D]  rounded-lg p-2  flex items-center space-x-3 sm:space-x-4 transition-colors duration-200 "
                                 >
-                                    <Star className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-300 fill-orange-300 flex-shrink-0" />
+                                    <Star className="w-6 h-6   bg-[#ffffff1A] ro p-2 rounded-lg w-7 h-7 md:w-15 md:h-15 text-orange-300 fill-orange-300 flex-shrink-0" />
                                     <div className="min-w-0 flex-1">
                                         <div className="text-gray-400 text-xs sm:text-sm font-medium mb-1">{award.year}</div>
                                         <div className="text-white text-base sm:text-lg leading-tight break-words">{award.title}</div>
@@ -87,9 +87,9 @@ const AwardsSection = () => {
                             {awards.slice(3, 5).map((award, index) => (
                                 <div
                                     key={index + 3}
-                                    className="bg-[#FFFFFF0D] rounded-lg p-4 sm:p-5 md:p-6 flex items-center space-x-3 sm:space-x-4 transition-colors duration-200 "
+                                    className="bg-[#FFFFFF0D] rounded-lg rounded-lg p-2 flex items-center space-x-3 sm:space-x-4 transition-colors duration-200 "
                                 >
-                                    <Star className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-300 fill-orange-300 flex-shrink-0" />
+                                    <Star className="w-6 h-6 bg-[#ffffff1A] ro p-2 rounded-lg w-7 h-7 md:w-15 md:h-15 text-orange-300 fill-orange-300 flex-shrink-0" />
                                     <div className="min-w-0 flex-1">
                                         <div className="text-gray-400 text-xs sm:text-sm font-medium mb-1">{award.year}</div>
                                         <div className="text-white text-base sm:text-lg leading-tight break-words">{award.title}</div>
@@ -101,8 +101,8 @@ const AwardsSection = () => {
                         {/* Bottom row - 1 card centered */}
                         <div className="flex justify-center">
                             <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-4/10 ">
-                                <div className="bg-[#FFFFFF0D] rounded-lg p-4 sm:p-5 md:p-6 flex items-center space-x-3 sm:space-x-4 transition-colors duration-200 ">
-                                    <Star className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-300 fill-orange-300 flex-shrink-0" />
+                                <div className="bg-[#FFFFFF1A] rounded-lg p-2 flex items-center space-x-3 sm:space-x-4 transition-colors duration-200 ">
+                                    <Star className="w-6 h-6 bg-[#ffffff1A] ro p-2 rounded-lg w-7 h-7 md:w-15 md:h-15 text-orange-300 fill-orange-300 flex-shrink-0" />
                                     <div className="min-w-0 flex-1">
                                         <div className="text-gray-400 text-xs sm:text-sm font-medium mb-1">{awards[5].year}</div>
                                         <div className="text-white text-base sm:text-lg font-medium leading-tight break-words">{awards[5].title}</div>

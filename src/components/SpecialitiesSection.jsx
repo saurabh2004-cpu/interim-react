@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 const SpecialtiesSection = () => {
     const [expandedIndex, setExpandedIndex] = useState(null);
@@ -55,18 +56,78 @@ const SpecialtiesSection = () => {
         },
     }
 
+
     return (
         <section className="flex flex-col lg:flex-row max-h-[40em] overflow-hidden rounded-2xl mx-8">
-            <div className="lg:min-w-1/2 relative">
-                <div className="absolute inset-0 overflow-hidden rounded-2xl">
+            <div className="relative w-full h-screen overflow-hidden rounded-2xl mx-2">
+                <div className="absolute inset-0">
                     <img
-                        src="https://framerusercontent.com/images/KGTXISgxyxmkCq256EXQwsbnNto.jpg?scale-down-to=2048"
+                        src="https://framerusercontent.com/images/KGTXISgxyxmkCq256EXQwsbnNto.jpg"
                         alt="Interior design background"
-                        className="w-[42.3em] h-[40.5em] object-cover object-center rounded-2xl"
-                        loading="lazy"
+                        className="w-full h-full object-cover rounded-2xl"
                     />
-                    
                 </div>
+
+                {/* Content Container */}
+                <motion.div
+                    className="relative h-full flex flex-col justify-between z-10  md:p-12 "
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                >
+                    {/* Top Content (if needed) */}
+                    <div></div>
+
+                    {/* Bottom Overlay Card */}
+                    <motion.div
+                        className="bg-white/10 backdrop-blur-lg rounded-xl p-4 mb-4 mx-auto w-full"
+                        variants={fadeInUp}
+                    >
+                        <motion.h2
+                            className="text-2xl md:text-3xl  font-light font-semibold inter-placeholder mb-4"
+                            variants={fadeInUp}
+                            style={{ color: '#FDFCEE' }}
+                        >
+                            Our specialty lies in transforming spaces into harmonious environments
+                        </motion.h2>
+
+                        <motion.p
+                            className="text-white/80 text-sm md:text-base mb-6 font-medium inter-placeholder"
+                            variants={fadeInUp}
+                            style={{ color: '#FDFCEE' }}
+                        >
+                            Our craft, a delicate dance of light and shadow, seeks to conjure spaces that echo with the whispers of timeless elegance and bespoke charm.
+                        </motion.p>
+
+                        <div className='flex align-center'>
+                            <motion.button
+                                className="bg-[#fffef2] text-white px-8 py-2 rounded-xl font-semibold text-lg transition-all duration-500 relative z-10 group-hover:rounded-r-none group-hover:pr-4"
+                                whileHover={{
+                                    scale: 1.02,
+                                }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <span className="relative z-10 inter-placeholder" style={{ color: '#1f3630' }}>Start a Project </span>
+                                <motion.div
+                                    className="absolute top-0 right-0 h-full w-0 group-hover:w-4 transition-all duration-500 ease-out"
+                                />
+                            </motion.button>
+                            <motion.button
+                                className="bg-[#F3AC85]  text-[#1F3630] p-3 rounded-xl transition-all duration-500 ml-2 group-hover:ml-0 group-hover:rounded-l focus:outline-none relative z-10"
+                                whileHover={{
+                                    scale: 1.05,
+
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <motion.div whileHover={{ y: 2 }} transition={{ duration: 0.2 }}>
+                                    <ArrowRight size={20} strokeWidth={2} />
+                                </motion.div>
+                            </motion.button>
+                        </div>
+                    </motion.div>
+                </motion.div>
             </div>
 
             {/* Scrollable Right Section */}
@@ -120,11 +181,11 @@ const SpecialtiesSection = () => {
                                     {specialties.map((item, index) => (
                                         <div
                                             key={index}
-                                            className="p-6 m-4 rounded-xl hover:bg-[#FFFFFF0D] transition-all cursor-pointer border border-[#FFFFFF1A]"
+                                            className="p-2 m-4  rounded-xl hover:bg-[#FFFFFF0D] transition-all cursor-pointer "
                                             onClick={() => toggleAccordion(index)}
                                         >
                                             <div className="flex justify-between items-center">
-                                                <h3 className="text-xl mb-2 text-[#FDFCEE] font-medium">{item.title}</h3>
+                                                <h3 className="text-xl mb-4 text-[#FDFCEE] font-medium">{item.title}</h3>
                                                 <motion.div
                                                     animate={{ rotate: expandedIndex === index ? 180 : 0 }}
                                                     transition={{ duration: 0.3 }}
