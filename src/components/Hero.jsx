@@ -54,9 +54,9 @@ export default function Hero() {
       <div className="mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16 lg:py-20 w-full">
         <motion.div className="space-y-16" variants={staggerContainer} initial="hidden" animate="visible">
           <motion.div className="text-center pt-24 " variants={slideUpVariants}>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-7xl 2xl:text-8xl font-black text-slate-800  tracking-tight text-center sm:text-start inter-placeholder">
+            <h1 className="text-4xl mt-32 md:mt-0 sm:text-5xl lg:text-7xl xl:text-7xl 2xl:text-8xl font-black text-slate-800  tracking-tight text-center sm:text-start inter-placeholder">
               <span className="block font-black text-6xl text-start mt-16 mb-2 md:mb-0 md:mt-0 md:text-9xl text-[#1D322D]">Your Ideas,</span>
-              <span className="w-full md:block ">
+              <span className="w-full md:flex ">
                 <span className="font-black flex md:inline text-5xl text-start md:text-9xl text-[#1D322D]">Our Creative </span>
                 <span className="font-light italic flex text-6xl text-[#1D322D] text-start md:text-[145px] font-satisfy text-[#1D322D]">
                   Twist
@@ -108,15 +108,15 @@ export default function Hero() {
                 that stand the test of time.
               </motion.p>
 
-              <div className="relative group flex justify-start items-center align-center item-center mb-32">
+              <div className="relative group flex justify-start items-center align-center item-center mb-32 md:mb-0">
                 <motion.button
-                  className="bg-[#1F3630]  text-white px-8 py-3 rounded-2xl font-semibold text-lg transition-all duration-500 relative z-10 group-hover:rounded-r-none group-hover:pr-4"
+                  className="bg-[#1F3630] h-full text-white px-8 py-3 rounded-2xl font-semibold text-lg transition-all duration-500 relative z-10 group-hover:rounded-r-none group-hover:pr-4"
                   whileHover={{
                     scale: 1.02,
                   }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <span className="relative z-10">But Template</span>
+                  <span className="relative z-10">Buy Template</span>
                   <motion.div
                     className="absolute top-0 right-0 h-full w-0 group-hover:w-4 transition-all duration-500 ease-out"
                   />

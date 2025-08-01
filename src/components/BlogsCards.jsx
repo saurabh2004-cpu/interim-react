@@ -60,7 +60,7 @@ const BlogCard = ({ post }) => {
         <img
           src={post.imageUrl}
           alt={post.title}
-          className="w-[350px] h-[200px] md:w-[250px] md:h-[234px]  rounded-lg "
+          className="w-[350px] h-[200px] md:w-[300px] md:h-[270px]  rounded-lg "
           loading="lazy"
         />
       </div>

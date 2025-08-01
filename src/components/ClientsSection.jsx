@@ -13,7 +13,7 @@ const ClientsSection = () => {
     const duplicatedClients = [...clients, ...clients];
 
     return (
-        <div className="w-full bg-[#FFFFFF80] py-16 px-4 max-w-[90em] mx-auto rounded-3xl mt-20" style={{ backgroundColor: "#FFFEF2" }}>
+        <div className="w-full bg-[#ffffff80] my-32 md:py-16 px-4 pb-24  max-w-[90em] mx-auto rounded-3xl mt-20" style={{ backgroundColor: "#ffffff80" }}>
             <div className=" mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-12">
@@ -26,7 +26,7 @@ const ClientsSection = () => {
                             Clients
                         </span>
                     </div>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight inter-placeholder text-[#1D322D]" style={{ color: "#1D322D" }}>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight font-extrabold  leading-tight inter-placeholder text-[#1D322D]" style={{ color: "#1D322D", fontWeight: 1000,  }}>
                         Our Beloved Clients
                     </h2>
                 </div>
@@ -37,7 +37,7 @@ const ClientsSection = () => {
                     <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-[#FFFEF2] to-transparent z-10"></div>
 
                     {/* Scrolling container */}
-                    <div className="flex">
+                    <div className="flex mt-4">
                         <motion.div
                             className="flex space-x-12"
                             animate={{
@@ -61,7 +61,7 @@ const ClientsSection = () => {
                                     <img
                                         src={client.logo}
                                         alt={client.name}
-                                        className="max-w-full h-8 rounded-lg object-cover flex-shrink-0"
+                                        className=" h-12 rounded-lg object-cover flex-shrink-0"
                                     />
                                     <p className="text-2xl text-3xl  font-bold text-[#1D322D] whitespace-nowrap max-w-[200px]  ">
                                         {client.name}

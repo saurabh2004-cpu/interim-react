@@ -48,7 +48,7 @@ const ReviewCard = ({ review, index }) => {
 
   return (
     <motion.div
-      className="flex-shrink-0 w-[330px] h-[450px] md:h-[502px] bg-[#F5F4F0] rounded-2xl p-4 sm:p-6 mx-2  flex flex-col relative overflow-hidden"
+      className="flex-shrink-0 w-[330px] h-[450px] md:h-[502px] bg-[#F7F6E9] rounded-2xl p-4 sm:p-6 mx-2  flex flex-col relative overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}

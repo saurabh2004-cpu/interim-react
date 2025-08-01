@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 const FAQSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [hoveredIndex, setHoveredIndex] = useState('');
+   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setActiveIndex([activeIndex === index ? null : index]);
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   const faqs = [
@@ -61,13 +60,13 @@ const FAQSection = () => {
       <div className=" mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Side - Heading */}
-          <div className="flex flex-col">
-            <div className="flex items-center gap-3 ">
+          <div className="flex flex-col justify-center text-center md:text-left  md:justify-start px-3">
+            <div className="flex items-center gap-3 flex text-center justify-center md:justify-start md:text-left">
               <svg className="w-5 h-5 text-[#1D322D] " viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <circle cx="12" cy="12" r="6" strokeWidth="2" />
                 <circle cx="12" cy="12" r="3.2" fill="currentColor" />
               </svg>
-              <span className="text-xs font-medium tracking-wider inter-placeholder">FREQUENTLY ASKED QUESTIONS</span>
+              <span className="text-xs  tracking-wider inter-placeholder font-bold ">FREQUENTLY ASKED QUESTIONS</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 inter-placeholder">
               Your questions, our answers
@@ -77,11 +76,7 @@ const FAQSection = () => {
           {/* Right Side - FAQ Items */}
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className=" overflow-hidden transition-all duration-300"
-                hover={handleFAQHover(index)}
-              >
+              <div key={index} className="overflow-hidden transition-all duration-300">
                 <button
                   className="w-full bg-[#f7f6e9] rounded-xl flex justify-between items-center p-6 text-left focus:outline-none"
                   onClick={() => toggleFAQ(index)}
@@ -89,17 +84,20 @@ const FAQSection = () => {
                   <h3 className="text-lg font-medium text-gray-900">{faq.question}</h3>
                   <div className="ml-4 flex-shrink-0">
                     <svg
-                      className={`w-6 h-6 transform transition-transform duration-300 ${activeIndex === index ? 'rotate-45' : ''}`}
+                      className={`w-14 h-14 transform transition-transform duration-500 p-3 ${activeIndex === index ? 'rotate-45 bg-[#F3ac85] rounded-full' : ''}`}
                       viewBox="0 0 256 256"
                       fill="currentColor"
                     >
-                      <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z" />
+                     <path d="M136 120V64a8 8 0 0 0-16 0v56H64a8 8 0 0 0 0 16h56v56a8 8 0 0 0 16 0V136h56a8 8 0 0 0 0-16Z" />
+
                     </svg>
                   </div>
                 </button>
 
                 <div
-                  className={`transition-all bg-[#fffef2] duration-300 ease-in-out overflow-hidden ${activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                  className={`bg-[#fffef2] overflow-hidden transition-all duration-300 ease-in-out ${
+                    activeIndex === index ? 'max-h-[999px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
                 >
                   <div className="px-6 pb-6 pt-0 text-[#1D322D]">
                     <p>{faq.answer}</p>
@@ -107,8 +105,6 @@ const FAQSection = () => {
                 </div>
               </div>
             ))}
-
-
           </div>
         </div>
       </div>

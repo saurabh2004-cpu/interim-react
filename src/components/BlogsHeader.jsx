@@ -21,7 +21,7 @@ const BlogsHeader = () => {
         },
     }
     return (
-        <section className="bg-[#F7F6E9] py-20 lg:py-32 relative flex">
+        <section className="bg-[#F7F6E9] py-10 lg:py-22 relative flex">
             <div className=" min-h-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     className="relative flex "
@@ -39,13 +39,13 @@ const BlogsHeader = () => {
                                 <circle cx="12" cy="12" r="6" strokeWidth="2" />
                                 <circle cx="12" cy="12" r="3.2" fill="currentColor" />
                             </svg>
-                            <span className="text-xs font-semibold md:text-[12px] relative  left-1 md:right-0 md:top-0 text-[#1D322D] tracking-wider uppercase inter-placeholder">
+                            <span className="text-xs font-semibold md:text-[14px] relative  left-1 md:right-0 md:top-0 text-[#1D322D] tracking-wider uppercase inter-placeholder">
                                ARTICLES AND INSIGHTS
                             </span>
                         </motion.div>
 
                         <motion.div className="text-center text-[#1D322D] " variants={fadeInUp}>
-                            <h1 className="text-6xl text-[#1D322D] sm:text-7xl md:text-[192px]  lg:text-[192px]   font-black  leading-[0.75] tracking-tighter inter-placeholder" style={{ color: "#1D322D" }}>
+                            <h1 className="text-6xl text-[#1D322D]  md:text-[220px]    font-black  leading-[0.75] tracking-tighter inter-placeholder" style={{ color: "#1D322D" }}>
                                 Blogs
                             </h1>
                         </motion.div>
