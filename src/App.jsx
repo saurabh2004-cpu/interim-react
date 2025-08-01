@@ -26,13 +26,13 @@ function App() {
     <>
     <Navbar />
     <Hero />
-    {/* <VideoSection /> */}   
+    <VideoSection />   
     <AboutUs />
     <StatsSection  />
     <ServicesHeader />
     <ServicesGrid />
     <ProjectsHeader />
-    <ProjectShowcase />  
+    <ProjectShowcase /> 
     <ReviewsHeader />
     <ReviewsCarousel />
     <AwardsSection />

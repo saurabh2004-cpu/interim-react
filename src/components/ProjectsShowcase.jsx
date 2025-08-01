@@ -57,9 +57,9 @@ const Card = ({ title, description, src, color, categories, i }) => {
       }}
 
     >
-      <motion.div className="w-full max-w-[1400px] mx-auto px-2 lg:px-20" style={{ y }}>
+      <motion.div className="w-full max-w-[1400px] mx-auto px-2 lg:px-20 overflow-y-auto" style={{ y }}>
         <div
-          className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16 rounded-3xl p-4 my-4 lg:px-4 min-h-[80vh] lg:min-h-[70vh]"
+          className="flex flex-col lg:flex-row top-1 items-start gap-8 lg:gap-16 rounded-3xl p-4 my-4 lg:px-4 min-h-[80vh] lg:min-h-[70vh] "
           style={{ backgroundColor: color }}
         >
           {/* Left - Categories */}
